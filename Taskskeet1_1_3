@@ -1,0 +1,10 @@
+public class Tasksheet1_1_3_Ubaldo
+{
+public static void main(String[] args) {
+	
+	int check_number = 10;
+	String message = (check_number %2 == 0)?"is even number" : "is odd number";
+	
+	System.out.println("The entered number " +check_number+ " is " +message);
+	}
+}
