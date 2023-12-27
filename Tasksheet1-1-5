@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Tasksheet1_1_5 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a Word: ");
+		String string1 = input.nextLine();
+		StringBuilder word = new StringBuilder(string1);
+		System.out.println(string1.toString());
+		StringBuilder string2 = word.reverse();
+		System.out.println(string2.toString());
+		
+	if (string1.equals(string2.toString())){
+		System.out.println("The input string is a palindrome.");
+	} else {
+		System.out.println("The input string is not a palindrome.");
+	}
+}
+}
