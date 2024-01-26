@@ -1,0 +1,55 @@
+public abstract class Shape {
+    public abstract double getArea();
+    public abstract double getPerimeter();
+}
+//Rectangle.java
+class Rectangle extends Shape {
+    private double length;
+    private double width;
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+    public double getArea() {
+        return length * width;
+    }
+    public double getPerimeter() {
+        return 2 * (length + width);
+    }
+}
+//Circle.java
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+//Main.java
+class Main {
+    public static void main(String[] args) {
+        // create some shapes
+        Shape rectangle = new Rectangle(10, 12);
+        Shape circle = new Circle(5);
+
+
+        // calculate area and perimeter of each shape
+        System.out.println("\nArea and perimeter of various shapes:");
+        System.out.println("\nRectangle: Length-10, Width-12");
+        System.out.println("Area: " + rectangle.getArea());
+        System.out.println("Perimeter: " + rectangle.getPerimeter());
+
+        System.out.println("\nCircle: Radius-5");
+        System.out.println("Area: " + circle.getArea());
+        System.out.println("Perimeter: " + circle.getPerimeter());
+
+    }
+    }
